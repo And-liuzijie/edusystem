@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         version="3.1">
+    <context-param>
+        <param-name>javax.faces.CONFIG_FILES</param-name>
+        <param-value>/c3p0-config.xml</param-value>
+    </context-param>
+    <servlet>
+        <servlet-name>Faces Servlet</servlet-name>
+        <servlet-class>javax.faces.webapp.FacesServlet</servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>Faces Servlet</servlet-name>
+        <url-pattern>*.xhtml</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>loginServlet</servlet-name>
+        <servlet-class>com.servlet.loginServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>loginServlet</servlet-name>
+        <url-pattern>/loginServlet</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>AddCourseServlet</servlet-name>
+        <servlet-class>com.servlet.AddCourseServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AddCourseServlet</servlet-name>
+        <url-pattern>/AddCourseServlet</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>PlanCheckServlet</servlet-name>
+        <servlet-class>com.servlet.PlanCheckServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>PlanCheckServlet</servlet-name>
+        <url-pattern>/PlanCheckServlet</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>TDeleteServlet</servlet-name>
+        <servlet-class>com.servlet.TDeleteServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>TDeleteServlet</servlet-name>
+        <url-pattern>/TDeleteServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>TUpdateServlet</servlet-name>
+        <servlet-class>com.servlet.TUpdateServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>TUpdateServlet</servlet-name>
+        <url-pattern>/TUpdateServlet</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>TInsertServlet</servlet-name>
+        <servlet-class>com.servlet.TInsertServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>TInsertServlet</servlet-name>
+        <url-pattern>/TInsertServlet</url-pattern>
+    </servlet-mapping>
+
+
+
+
+
+
+</web-app>
